@@ -155,7 +155,7 @@
     }
 
     function genUrl(s, e, p, h = 40) {
-        let base = "http://hn.algolia.com/api/v1/search_by_date?tags=(story,poll,show_hn,ask_hn)"
+        let base = "https://hn.algolia.com/api/v1/search_by_date?tags=(story,poll,show_hn,ask_hn)"
         return base + "&numericFilters=created_at_i>" + s + ",created_at_i<=" + e + ",points>=" + p + "&hitsPerPage=" + h;
     }
 
@@ -203,9 +203,6 @@
 
     fetchAllPosts(generateUrls());
 
-    if (location.protocol == 'https:') {
-      location.href = location.href.replace("https://", "http://");
-    }
 </script>
 </body>
 </html>
