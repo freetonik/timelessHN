@@ -179,7 +179,7 @@
 
     function generateHTML(el) {
         let domain = "";
-        let url = "https://news.ycombinator.com/item?id=${el.objectID}"
+        let url = `https://news.ycombinator.com/item?id=${el.objectID}`
 
         if (el.url) {
             domain = `(${domainFromUrl(el.url)})`;
